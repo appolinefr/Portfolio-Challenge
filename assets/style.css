@@ -1,16 +1,98 @@
-body {
-    margin: 50px;
-    font-family: 'Montserrat', sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-.row {
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.column {
+nav {
   display: flex;
-  flex-direction: column
+  background-color: cadetblue;
+  
 }
 
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+aside {
+  flex: 1;
+  background-color: blueviolet;
+}
+
+header {
+  background-color: aqua;
+}
+
+.projects {
+  background-color: cadetblue;
+}
+
+.project-wrapper {
+  flex: 2;
+  background-color: beige;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.main-project {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 800px;
+  justify-content: center;
+}
+
+.secondary-project {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+  justify-content: center;
+}
+
+.secondary-project img {
+  width: 100%;
+}
+
+.main-project img {
+  width: 100%;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-flex;
+  text-align: center;
+    padding: 14px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
