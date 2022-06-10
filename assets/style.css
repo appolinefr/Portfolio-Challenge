@@ -1,0 +1,21 @@
+body {
+    margin: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column
+}
+
