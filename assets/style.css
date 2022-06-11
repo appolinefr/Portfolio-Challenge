@@ -32,22 +32,6 @@ nav a {
   line-height: 36px;
 }
 
-/* Aside Styling  */
-
-aside {
-  flex: 1;
-  border-radius: 10px 0px;
-}
-
-.projects {
-  line-height: 30px;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: underline;
-  margin-top: 50px;
-  color: var(--pink-color)
-}
-
 header {
   margin: 30px;
   padding: 10px;
@@ -56,7 +40,7 @@ header {
   font-weight: 300;
 }
 
-h1 {
+header h1 {
   font-size: 40px;
   font-weight: 400;
   line-height: 50px;
@@ -85,23 +69,9 @@ main {
   margin: 10px;
   border-radius: 10px;
   padding: 10px;
-  flex: 0 0 800px;
+  flex: 0 0 600px;
   justify-content: center;
   box-shadow: 0 1px 5px rgb(0 0 0 / 3%), 0 5px 30px rgb(0 0 0 / 10%);
-}
-
-.main-project h2 {
-  padding: 8px;
-  background-color: var(--green-color);
-  border-radius: 10px;
-  color: white;
-  line-height: 30px;
-  font-size: 30px;
-}
-
-section:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
 }
 
 .secondary-project {
@@ -113,7 +83,7 @@ section:hover {
   box-shadow: 0 1px 5px rgb(0 0 0 / 3%), 0 5px 30px rgb(0 0 0 / 10%);
 }
 
-.secondary-project h2 {
+.main-project h2, .secondary-project h2 {
   padding: 8px;
   line-height: 26px;
   font-size: 26px;
@@ -122,14 +92,15 @@ section:hover {
   color: white;
 }
 
-.secondary-project img {
-  width: 100%;
-  border-radius: 10px;
+section:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
 }
 
+.secondary-project img, 
 .main-project img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 /* styling for footer element  */
