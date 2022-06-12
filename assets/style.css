@@ -31,17 +31,27 @@ nav a {
   font-weight: 400;
   line-height: 36px;
 }
+ 
+/* styling for the header section  */
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background-color: darkgoldenrod;
-  margin: 30px;
   padding: 10px;
   font-size: 20px;
   line-height: 30px;
   font-weight: 300;
 }
 
+header img {
+  max-width:100%;
+  border-radius: 10px;
+}
+
 header h1 {
+  margin-left: 20px;
   font-size: 40px;
   font-weight: 400;
   line-height: 50px;
