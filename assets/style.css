@@ -33,6 +33,7 @@ nav a {
 }
 
 header {
+  background-color: darkgoldenrod;
   margin: 30px;
   padding: 10px;
   font-size: 20px;
@@ -50,40 +51,72 @@ span {
   color: var(--pink-color);
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
+/* main project styling  */
 
-.project-wrapper {
-  flex: 2;
-  border-radius:0px 10px 10px 0px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.main-project-wrapper {
+  background-color: aqua;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius:0px 10px 10px 0px;
+  margin-bottom: 30px;
 }
 
 .main-project {
-  margin: 10px;
+  background-color: coral;
+  display: block;
   border-radius: 10px;
-  padding: 10px;
-  flex: 0 0 600px;
-  justify-content: center;
+  padding: 5px;
+  width: 60%;
   box-shadow: 0 1px 5px rgb(0 0 0 / 3%), 0 5px 30px rgb(0 0 0 / 10%);
+}
+.main-project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.main-project-content {
+  flex: 0 0 30%;
+  align-content: center;
+}
+
+.main-project-content h2 {
+margin-top: 100px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #DC88A4;
+  
+}
+.main-project-content p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+/* end of main project styling  */
+
+/* secondary projects styling  */
+.secondary-project-wrapper {
+  background-color: bisque;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius:0px 10px 10px 0px;
+  margin-bottom: 30px;
 }
 
 .secondary-project {
-  margin:10px;
+  background-color: blueviolet;
+  flex: 0 0 33%;
+  max-width: 33%;
   border-radius: 10px;
-  padding: 10px;
-  flex: 0 0 400px;
-  justify-content: center;
+  padding: 5px;
   box-shadow: 0 1px 5px rgb(0 0 0 / 3%), 0 5px 30px rgb(0 0 0 / 10%);
 }
 
-.main-project h2, .secondary-project h2 {
+.secondary-project h2 {
   padding: 8px;
   line-height: 26px;
   font-size: 26px;
@@ -91,16 +124,16 @@ main {
   border-radius: 10px;
   color: white;
 }
-
-section:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
-}
-
-.secondary-project img, 
-.main-project img {
+.secondary-project img {
   width: 100%;
   border-radius: 10px; 
+}
+/* end secondary projects styling  */
+
+
+figure:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
 }
 
 /* styling for footer element  */
@@ -114,18 +147,11 @@ footer {
   color: #fff;
 }
 
-footer ul {
-  list-style: none;
-}
-
-footer ul li {
+footer a {
   flex-wrap: wrap;
   display: inline-flex;
   text-align: center;
   padding: 14px 20px;
-}
-
-footer a {
   text-decoration: none;
   color: #fff;
   font-weight: bolder;
@@ -142,8 +168,10 @@ footer a:hover{
 
 @media screen and (max-width: 768px) {
   main,
-  nav, footer {
+  nav, footer, .main-project-wrapper, .secondary-project-wrapper {
     flex-direction: column;
+    justify-content: center;
   }
   header {text-align: center;}
+  
 }
