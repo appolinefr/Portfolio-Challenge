@@ -1,7 +1,9 @@
 :root {
   --pink-color: #DC88A4;
   --green-color: #557571;
-  --light-background: #F4F4F4;
+  --light: #F4F4F4;
+  --dark: #13293d;
+  --border-radius: 10px;
 }
 
 * {
@@ -13,21 +15,27 @@ body {
   margin: 0;
 }
 
+/* header styling  */
 header {
   display: flex;
   padding: 40px;
   justify-content: flex-start;
-  background: #13293d;
-  color: #fff;
+  background:var(--dark);
 }
 
 header h1 {
+  color: var(--light);
   margin-left: 20px;
   font-size: 40px;
   font-weight: 400;
   line-height: 50px;
 }
 
+span {
+  color: var(--pink-color);
+}
+
+/* navbar styling */
 nav {
   display: flex;
   justify-content: flex-end;
@@ -35,7 +43,7 @@ nav {
 }
 
 nav a {
-  color: var(--light-background);
+  color: var(--light);
   padding: 20px 20px;
   text-decoration: none;
   text-align: center;
@@ -44,20 +52,28 @@ nav a {
   line-height: 36px;
 }
 
+nav a:hover{
+  transform: scale(1.1);
+  transition: all 200ms ease-out;
+  color: var(--pink-color);
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--light);
 }
 
+/* side bar/about me section styling */
 aside {
   flex: 1;
-  background-color: #b9c6ae;
+  background-color: #C0E2D2;
   padding: 80px;
   text-align: center;
 }
 
 aside h2 {
-  margin-top: 30px;
+  color: var(--dark);
   margin-bottom: 20px;
   font-size: 40px;
   font-weight: 400;
@@ -65,6 +81,8 @@ aside h2 {
 }
 
 aside p {
+  margin-top: 10px;
+  color: var(--dark);
   padding: 10px;
   font-size: 20px;
   line-height: 30px;
@@ -72,34 +90,31 @@ aside p {
 }
 
 aside img {
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
-span {
-  color: var(--pink-color);
-}
-
+/* footer styling  */
 footer {
   display: flex;
   text-align: center;
   justify-content:space-around;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   background: var(--pink-color);
-  color: #fff;
+  color:var(--light);
 }
 
 footer h2 {
-  color: #fff;
-  font-weight: bolder;
+  color: var(--light);
+  font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
-  font-size: 24px;
 }
 
 footer a {
   text-decoration: none;
-  color: #fff;
-  font-weight: bolder;
+  color: var(--light);
+  font-weight: 400;
   line-height: 30px;
   font-size: 24px;
 }
@@ -109,6 +124,7 @@ footer a:hover{
   transition: all 200ms ease-out;
 }
 
+/* Projects sections styling  */
 .project-wrapper{
   flex: 4;
   padding: 20px;
@@ -117,6 +133,7 @@ footer a:hover{
   justify-content: center;
 }
 
+/* Main project styling  */
 .main-project {
   display: flex;
   width: 100%;
@@ -129,6 +146,25 @@ footer a:hover{
   flex: 0 0 400px;
 }
 
+.project-1 img {
+  border-radius: var(--border-radius);
+}
+
+/* seconday projects styling  */
+.project{
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  flex: 0 1 400px;
+}
+
+.project:hover,
+.project-1:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
+}
+
 .project-header {
   display: inline-block;
   position: relative;
@@ -137,52 +173,21 @@ footer a:hover{
   line-height: 26px;
   font-size: 26px;
   background-color: var(--green-color); 
-  border-radius: 0px 10px 10px 0px;
-  color: white;
-}
-
-.project{
-  border-radius: 10px;
-  padding: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  flex: 0 1 400px;
-}
-
-.project h2 {
-  display: inline-block;
-  position: relative;
-  bottom: 80px; 
-  padding: 15px;
-  line-height: 26px;
-  font-size: 26px;
-  background-color: var(--green-color); 
-  border-radius: 0px 10px 10px 0px;
-  color: white;
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+  color: var(--light);
 }
 
 .project img {
   width: 100%;
-  border-radius: 10px;
-}
-.project-1 img {
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
-.project:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
-}
-
-.project-1:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
-}
-
+/* responsive design  */
 @media screen and (max-width: 768px) {
   header, main,
   nav, footer {
     flex-direction: column;
   }
+  h1 {text-align: center;}
 }
 
