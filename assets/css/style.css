@@ -39,7 +39,7 @@ span {
 nav {
   display: flex;
   justify-content: flex-end;
-  background-color: var(--green-color);
+  background-color: var(--pink-color);
 }
 
 nav a {
@@ -55,25 +55,24 @@ nav a {
 nav a:hover{
   transform: scale(1.1);
   transition: all 200ms ease-out;
-  color: var(--pink-color);
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--light);
+  background-color: white;
 }
 
 /* side bar/about me section styling */
 aside {
   flex: 1;
-  background-color: #C0E2D2;
-  padding: 80px;
+  background-color: var(--green-color);
+  padding: 60px;
   text-align: center;
 }
 
 aside h2 {
-  color: var(--dark);
+  color:var(--light);
   margin-bottom: 20px;
   font-size: 40px;
   font-weight: 400;
@@ -82,7 +81,7 @@ aside h2 {
 
 aside p {
   margin-top: 10px;
-  color: var(--dark);
+  color: var(--light);
   padding: 10px;
   font-size: 20px;
   line-height: 30px;
@@ -143,7 +142,7 @@ footer a:hover{
 .project-1 {
   padding: 10px;
   margin-top: 30px;
-  flex: 0 0 400px;
+  flex: 0 0 500px;
 }
 
 .project-1 img {
@@ -153,10 +152,9 @@ footer a:hover{
 /* seconday projects styling  */
 .project{
   border-radius: var(--border-radius);
-  padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
-  flex: 0 1 400px;
+  flex: 0.5 0 400px;
 }
 
 .project:hover,
@@ -182,12 +180,16 @@ footer a:hover{
   border-radius: var(--border-radius);
 }
 
+.project img:hover {
+  background: url("/assets/images/weather-app.png") no-repeat;
+}
+
 /* responsive design  */
 @media screen and (max-width: 768px) {
-  header, main,
+  main,
   nav, footer {
     flex-direction: column;
   }
-  h1 {text-align: center;}
+  header {justify-content: center;}
 }
 
