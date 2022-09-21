@@ -149,6 +149,9 @@ footer a:hover{
   border-radius: var(--border-radius);
 }
 
+.project-1 img, .project img {
+  border: var(--green-color) 2px solid;
+}
 /* seconday projects styling  */
 .project{
   border-radius: var(--border-radius);
